@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peças Honda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://i.postimg.cc/HLY6TxPf/Promo-o-3.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      background: white;
+      border-bottom: 3px solid #c8030a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+    }
+
+    .logo-loja {
+      height: 40px;
+      margin-right: auto;
+    }
+
+    .logo-honda {
+      height: 35px;
+      margin-right: 40%;
+      display: block;
+      
+    }
+
+    .encontrar {
+      color: #c8030a;
+      font-weight: bold;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 100px auto 30px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      color: #c8030a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #333;
+    }
+
+    select, input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #c8030a;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #a10207;
+    }
+
+    .contatos {
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 0 auto 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+
+    .contatos h2 {
+      color: #c8030a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .unidade {
+      border-left: 4px solid #c8030a;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com as logos -->
+  <header>
+    <img src="https://i.postimg.cc/T1RQgjb9/Design-sem-nome-3.png" alt="Logo da Loja" class="logo-loja">
+    <img src="https://www.honda.com.br/sites/hda/themes/hondahda/assets/img/honda-horizontal.svg" alt="Honda" class="logo-honda">
+    </div>
+  </header>
+
+  <!-- Formulário de peças -->
+  <div class="container">
+    <h1>Solicite suas Peças</h1>
+    <form id="formulario">
+      <label for="modelo">Modelo:</label>
+      <select id="modelo" required>
+        <option value="">Selecione o modelo</option>
+      </select>
+
+      <label for="ano">Ano:</label>
+      <select id="ano" required>
+        <option value="">Selecione o ano</option>
+      </select>
+
+      <label for="versao">Versão:</label>
+      <select id="versao" required>
+        <option value="">Selecione a versão</option>
+      </select>
+
+      <label for="peca">Peça desejada:</label>
+      <input type="text" id="peca" required placeholder="Ex: Guidão, retrovisor..." />
+
+      <button type="submit">Enviar no WhatsApp</button>
+    </form>
+  </div>
+
+  <!-- Contatos das unidades -->
+  <div class="contatos">
+    <h2>Nossas Unidades</h2>
+
+    <div class="unidade">
+      <strong>CENTRO</strong><br>
+      Rua Floriano Peixoto, 152 São José - PE CEP: 50020-062<br>
+      📞 (81) 3419-9464<br>
+      ✉️ motopartscentro@motopartshonda.com.br
+    </div>
+
+    <div class="unidade">
+      <strong>CASA AMARELA</strong><br>
+      Av. Norte, 5000 Casa Amarela - PE CEP: 52280-000<br>
+      📞 (81) 3268-3679 / (81) 3268-3001<br>
+      ✉️ motpartscasamarela@motopartshonda.com.br
+    </div>
+
+    <div class="unidade">
+      <strong>VITÓRIA</strong><br>
+      Av. Henrique de Holanda, 2150 BR 232 - KM 62 Livramento - PE CEP: 55612-001<br>
+      📞 (81) 3523-0007<br>
+      ✉️ motopartsvitoria@motopartshonda.com.br
+    </div>
+
+    <div class="unidade">
+      <strong>CARUARU</strong><br>
+      Av. José Pinheiro dos Santos, 292 - Agamenon Magalhães - PE CEP: 55024-640<br>
+      📞 (81) 3722-6211
+    </div>
+
+    <div class="unidade">
+      <strong>GRAVATÁ</strong><br>
+      Av. Cícero Batista de Oliveira, 1945 - Prado Gravatá - PE CEP: 55642-030<br>
+      📞 (81) 3533-6520<br>
+      ✉️ motopartsgravata@motopartshonda.com.br
+    </div>
+  </div>
+
+  <!-- Script funcional -->
+  <script>
+   const dados = {
+      "Biz 100": {
+        anos: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        versoes: ["ES", "KS", "EX", "Standard"]
+      },
+      "Biz 110i": {
+        anos: [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        versoes: ["Standard"]
+      },
+      "Biz 125": {
+        anos: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        versoes: ["ES", "KS", "EX", "Standard"]
+      },
+      "C-100 Biz": {
+        anos: [2000,2001,2002,2003,2004,2005,2006,2007],
+        versoes: ["Standard"]
+      },
+      "CB 1000R": {
+        anos: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        versoes: ["Standard"]
+      },
+      "CB 1300": {
+        anos: [2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016],
+        versoes: ["Standard"]
+      },
+      "CB 250F Twister": {
+        anos: [2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018],
+        versoes: ["Standard"]
+      },
+      "CB 300F Twister": {
+        anos: [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        versoes: ["Standard"]
+      },
+      "CB 300R": {
+        anos: [2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
+        versoes: ["Standard"]
+      },
+      "CB 400": {
+        anos: [1990,1991,1992,1993,1994,1995,1996,1997,1998,1999],
+        versoes: ["Standard"]
+      },
+      "CB 450": {
+        anos: [1996,1997,1998,1999,2000],
+        versoes: ["Standard"]
+      },
+      "CB 500": {
+        anos: [1993,1994,1995,1996,1997,1998,1999,2000,2001,2002],
+        versoes: ["Standard"]
+      },
+      "CB 500 Hornet": {
+        anos: [1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006],
+        versoes: ["Standard"]
+      },
+      "CB 500F": {
+        anos: [2013,2014,2015,2016,2017,2018,2019,2020,2021],
+        versoes: ["Standard"]
+      },
+      "CB 500X": {
+        anos: [2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
+        versoes: ["Standard"]
+      },
+      "CB 600F Hornet": {
+        anos: [2005,2006,2007,2008,2009,2010,2011,2012,2013,2014],
+        versoes: ["Standard"]
+      },
+      "CB 650F": {
+        anos: [2014,2015,2016,2017,2018,2019,2020],
+        versoes: ["Standard"]
+      },
+      "CB 650R": {
+        anos: [2019,2020,2021,2022,2023],
+        versoes: ["Standard"]
+      },
+      "CBR 1000F": {
+        anos: [1990,1991,1992,1993,1994,1995],
+        versoes: ["Standard"]
+      },
+      "CBR 1000RR": {
+        anos: [2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020],
+        versoes: ["Standard"]
+      },
+      "CBR 1000RR-R FIREBLADE SP": {
+        anos: [2020,2021,2022,2023,2024],
+        versoes: ["Standard"]
+      },
+      "CBR 1100XX": {
+        anos: [1996,1997,1998,1999,2000],
+        versoes: ["Standard"]
+      },
+      "CBR 250R": {
+        anos: [2010,2011,2012,2013,2014,2015,2016,2017,2018],
+        versoes: ["Standard"]
+      },
+      "CBR 450SR": {
+        anos: [1990,1991,1992],
+        versoes: ["Standard"]
+      },
+      "CBR 500R": {
+        anos: [2013,2014,2015,2016,2017,2018,2019],
+        versoes: ["Standard"]
+      },
+      "CBR 600F": {
+        anos: [2001,2002,2003,2004,2005],
+        versoes: ["Standard"]
+      },
+      "CBR 600RR": {
+        anos: [2003,2004,2005,2006,2007,2008,2009],
+        versoes: ["Standard"]
+      },
+      "CBR 650F": {
+        anos: [2014,2015,2016,2017,2018,2019],
+        versoes: ["Standard"]
+      },
+      "CBR 650R": {
+        anos: [2019,2020,2021,2022],
+        versoes: ["Standard"]
+      },
+      "CBR 900RR": {
+        anos: [2000,2001,2002,2003],
+        versoes: ["Standard"]
+      },
+      "CG 125": {
+        anos: [1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+        versoes: ["Standard", "Cargo ES", "Fan ES"]
+      },
+      "CG 150": {
+        anos: [2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+        versoes: ["Standard", "ESD"]
+      },
+      "CG 160": {
+        anos: [2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+        versoes: ["Standard", "Titan", "Start", "Fan"]
+      },
+      "CH 125R Spacy": {
+        anos: [2004,2005,2006,2007,2008],
+        versoes: ["Standard"]
+      },
+      "CRF 1000L Africa Twin": {
+        anos: [2016,2017,2018,2019,2020,2021],
+        versoes: ["Standard"]
+      },
+      "CRF 1100L Africa Twin": {
+        anos: [2020,2021,2022,2023],
+        versoes: ["Standard"]
+      },
+      "CRF 250F": {
+        anos: [2010,2011,2012,2013,2014],
+        versoes: ["Standard"]
+      },
+      "CRF 250L": {
+        anos: [2013,2014,2015,2016,2017],
+        versoes: ["Standard"]
+      },
+      "CRF 450R": {
+        anos: [2010,2011,2012,2013,2014],
+        versoes: ["Standard"]
+      },
+      "Elite 125": {
+        anos: [2000,2001,2002,2003],
+        versoes: ["Standard"]
+      },
+      "Forza 350": {
+        anos: [2020,2021,2022,2023,2024],
+        versoes: ["Standard"]
+      },
+      "Honda ADV": {
+        anos: [2019,2020,2021,2022,2023],
+        versoes: ["Standard"]
+      },
+      "Lead 110": {
+        anos: [2010,2011,2012,2013,2014],
+        versoes: ["Standard"]
+      },
+      "NC 750X": {
+        anos: [2014,2015,2016,2017,2018,2019,2020],
+        versoes: ["Standard"]
+      },
+      "NX 350 Sahara": {
+        anos: [2023,2024],
+        versoes: ["Standard"]
+      },
+      "NX4 Falcon": {
+        anos: [2015,2016,2017,2018],
+        versoes: ["Standard"]
+      },
+      "NXR 125 Bros": {
+        anos: [2003,2004,2005,2013,2014,2015],
+        versoes: ["Standard"] 
+      }, 
+      "NXR 150 Bros": {
+        anos: [2005,2006,2007,2008,2009,2010,2011,2012,2013],
+        versoes: ["Standard"] 
+      },  
+      "NXR 160 Bros": {
+        anos: [2016,2017,2018,2019,2020,2021,2022,2023],
+        versoes: ["Standard"]
+      },
+      "PCX": {
+        anos: [2010,2011,2012,2013,2014,2015],
+        versoes: ["Standard"]
+      },
+      "PCX 160": {
+        anos: [2018,2019,2020,2021,2022],
+        versoes: ["Standard"]
+      },
+      "Pop 100": {
+        anos: [2005,2006,2007,2008],
+        versoes: ["Standard"]
+      },
+      "Pop 110i": {
+        anos: [2015,2016,2017],
+        versoes: ["Standard"]
+      },
+      "SH 150i": {
+        anos: [2014,2015,2016,2017,2018],
+        versoes: ["Standard"]
+      },
+      "SH 300i": {
+        anos: [2010,2011,2012,2013,2014],
+        versoes: ["Standard"]
+      },
+      "Shadow 750": {
+        anos: [2005,2006,2007,2008,2009,2010],
+        versoes: ["Standard"]
+      },
+      "TRX 350 FourTrax": {
+        anos: [2010,2011,2012],
+        versoes: ["Standard"]
+      },
+      "TRX 700 FourTrax": {
+        anos: [2015,2016],
+        versoes: ["Standard"]
+      },
+      "VFR 1200F": {
+        anos: [2010,2011,2012,2013],
+        versoes: ["Standard"]
+      },
+      "X-ADV": {
+        anos: [2017,2018,2019,2020,2021],
+        versoes: ["Standard"]
+      },
+      "XL 125S": {
+        anos: [1990,1991,1992],
+        versoes: ["Standard"]
+      },
+      "XRE 190": {
+        anos: [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],
+        versoes: ["Standard"]
+      },
+      "XRE 300": {
+        anos: [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],
+        versoes: ["Standard", "Sahara", "Rally", "Adventure"]
+      },
+      "XRE 300 Sahara": {
+        anos: [2023,2024],
+        versoes: ["Standard", "Adventure", "Rally"]
+      }
+    };
+
+    const modeloSelect = document.getElementById('modelo');
+    const anoSelect = document.getElementById('ano');
+    const versaoSelect = document.getElementById('versao');
+
+    for (let modelo in dados) {
+      const option = document.createElement('option');
+      option.value = modelo;
+      option.textContent = modelo;
+      modeloSelect.appendChild(option);
+    }
+
+    modeloSelect.addEventListener('change', () => {
+      const modeloSelecionado = modeloSelect.value;
+      anoSelect.innerHTML = '<option value="">Selecione o ano</option>';
+      versaoSelect.innerHTML = '<option value="">Selecione a versão</option>';
+
+      if (dados[modeloSelecionado]) {
+        dados[modeloSelecionado].anos.forEach(ano => {
+          const option = document.createElement('option');
+          option.value = ano;
+          option.textContent = ano;
+          anoSelect.appendChild(option);
+        });
+
+        dados[modeloSelecionado].versoes.forEach(versao => {
+          const option = document.createElement('option');
+          option.value = versao;
+          option.textContent = versao;
+          versaoSelect.appendChild(option);
+        });
+      }
+    });
+
+    document.getElementById('formulario').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const modelo = modeloSelect.value;
+      const ano = anoSelect.value;
+      const versao = versaoSelect.value;
+      const peca = document.getElementById('peca').value;
+      const mensagem = `Olá! Gostaria de saber o valor da peça: *${peca}* para a moto *${modelo}*, ano *${ano}*, versão *${versao}*.`;
+      const telefone = '5581999960946';
+      const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>
